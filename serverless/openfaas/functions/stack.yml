@@ -1,0 +1,58 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  allreduce-minio:
+    lang: node18
+    handler: ./allreduce-minio
+    image: mtalha1/allreduce-redis
+    environment:
+      NODE_ENV: production
+      MAX_JSON_SIZE: '100mb'
+      write_timeout: 5m2s
+      read_timeout: 5m2s
+      exec_timeout: 5m
+      # GRPC_TRACE: 'all'
+      # GRPC_VERBOSITY: 'DEBUG'
+    annotations:
+      com.openfaas.kubernetes.imagePullSecrets: "regcred"
+    labels:
+      com.openfaas.scale.min: 5
+      com.openfaas.scale.max: 5
+      com.openfaas.scale.factor: 100
+  allreduce-redis:
+    lang: node18
+    handler: ./allreduce-redis
+    image: mtalha1/allreduce-redis
+    environment:
+      NODE_ENV: production
+      MAX_JSON_SIZE: '100mb'
+      write_timeout: 5m2s
+      read_timeout: 5m2s
+      exec_timeout: 5m
+    annotations:
+      com.openfaas.kubernetes.imagePullSecrets: "regcred"
+    labels:
+      com.openfaas.scale.min: 5
+      com.openfaas.scale.max: 5
+      com.openfaas.scale.factor: 100
+  allreduce-miso:
+    lang: node18-miso
+    handler: ./allreduce-miso
+    image: mtalha1/allreduce-redis
+    environment:
+      NODE_ENV: production
+      MAX_JSON_SIZE: '100mb'
+      write_timeout: 5m2s
+      read_timeout: 5m2s
+      exec_timeout: 5m
+    annotations:
+      com.openfaas.kubernetes.imagePullSecrets: "regcred"
+    labels:
+      com.openfaas.scale.min: 5
+      com.openfaas.scale.max: 5
+      com.openfaas.scale.factor: 100
+
+
+
