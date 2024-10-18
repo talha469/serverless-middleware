@@ -57,6 +57,19 @@ install_helm() {
   sudo apt-get install helm
 }
 
+# Install kubectl
+install_kubectl() {
+  sudo snap install kubectl --classic
+}
+
+# Install microk8s
+install_microk8s() {
+  sudo snap install microk8s --classic --channel=1.30/stable
+  sudo usermod -aG microk8s $USER
+  sudo chown -f -R $USER ~/.kube
+}
+
+
 # Check if all tools are installed
 echo "Checking and Installing Required Tools..."
 
@@ -65,6 +78,8 @@ check_installed "docker" install_docker
 check_installed "faas-cli" install_faascli
 check_installed "k9s" install_k9s
 check_installed "helm" install_helm
+check_installed "kubectl" install_kubectl
+check_installed "microk8s" install_microk8s
 
 echo "Installation complete."
 
