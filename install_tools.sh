@@ -68,6 +68,8 @@ check_installed "helm" install_helm
 
 echo "Installation complete."
 
+echo "*****"
+
 # Verify Installation
 echo "Verifying installations..."
 
