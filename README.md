@@ -17,7 +17,9 @@ If you want to use provided Ubuntu Oracle VM system with pre-istalled libraries 
 
 https://unioulu-my.sharepoint.com/:f:/g/personal/marshad23_student_oulu_fi/ElDnTtMHIW9Nr23ZtlzMm0MB6PSfXRLPUNzBsb7RYuBEag?e=Nczv0f
 
+```
 password = mtalhaarshad
+```
 
 Open the terminal and navigate to the "serverless-middleware" cloned already
 
@@ -32,10 +34,10 @@ run the following script, This script ensures that your Kubernetes cluster (Micr
 
 After running the script, you can access the OpenFaaS gateway by navigating to http://127.0.0.1:8080/ui/ in your web browser. This URL will open the OpenFaaS dashboard, where you can manage and monitor your serverless functions seamlessly.
 
+```
 username = admin
-
 password = pA6iteNeWOQP
-
+```
 
 
 
