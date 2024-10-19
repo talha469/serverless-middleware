@@ -3,11 +3,39 @@
 
 CRDT-based Serverless Middleware for Stateful Objects in the Edge-Cloud Continuum
 
+You can run the code by following approaches
+
+- Download OVA file provided and follow the instructions
+- Use VM Manager like Oracle or Ubuntu system installed on your machine and Install tools and libraries
+
+
+
+
+## 1) Using Ubuntu OVA File
+
+If you want to use provided Ubuntu Oracle VM system with pre-istalled libraries and tool, please download the file and import it in your oracle VM Manager
+
+https://unioulu-my.sharepoint.com/:u:/g/personal/marshad23_student_oulu_fi/EZqD0nK3dv1Jj7UvELTmKCIBYKmazhWmwZAYuzbYALFoow?e=DTDir3
+
+Open the terminal and navigate to the "serverless-middleware" cloned already
+
+```
+cd ./Desktop/serverless-middleware
+```
+run the following script, This script ensures that your Kubernetes cluster (MicroK8s) is running and that all OpenFaaS pods in the openfaas namespace are both running and ready. It begins by verifying the pod statuses and enters a loop, waiting for a specified intervalto recheck until all pods are ready or a timeout is reached. The script initiates port-forwarding from localhost:8080 to the OpenFaaS gateway
+
+```
+./runFaas.sh
+```
+
+After running the script, you can access the OpenFaaS gateway by navigating to http://localhost:8080/ui in your web browser. This URL will open the OpenFaaS dashboard, where you can manage and monitor your serverless functions seamlessly.
+
+
 
 
 
 If you have linux based system installed, please skip the below step 
-## Oracle VM Ubuntu Installation 
+## 2) Oracle VM Ubuntu Installation 
 - Download [Oracle VM](https://www.virtualbox.org/wiki/Downloads) and create a new virtual machine
 - Download [Ubuntu Iso File](https://ubuntu.com/download/desktop) - we are using ubuntu 24.04.1 LTS in this project
 - For easy copy paste and other handy options between host machine and VM, please follow these steps:
@@ -81,4 +109,5 @@ sudo ./install_tools.sh
 ## Acknowledgements
 
 This repo is heavily built on [miso-serverless-middleware](https://github.com/valentingc/miso-serverless-middleware)
+
 
