@@ -15,7 +15,7 @@ You can run the code by following approaches
 
 If you want to use provided Ubuntu Oracle VM system with pre-istalled libraries and tool, please download the file and import it in your oracle VM Manager
 
-*link will be provided here*
+https://unioulu-my.sharepoint.com/:f:/g/personal/marshad23_student_oulu_fi/ElDnTtMHIW9Nr23ZtlzMm0MB6PSfXRLPUNzBsb7RYuBEag?e=Nczv0f
 
 Open the terminal and navigate to the "serverless-middleware" cloned already
 
