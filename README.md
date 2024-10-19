@@ -28,7 +28,10 @@ run the following script, This script ensures that your Kubernetes cluster (Micr
 ./runFaas.sh
 ```
 
-After running the script, you can access the OpenFaaS gateway by navigating to http://localhost:8080/ui in your web browser. This URL will open the OpenFaaS dashboard, where you can manage and monitor your serverless functions seamlessly.
+After running the script, you can access the OpenFaaS gateway by navigating to http://127.0.0.1:8080/ui/ in your web browser. This URL will open the OpenFaaS dashboard, where you can manage and monitor your serverless functions seamlessly.
+
+username = admin
+password = pA6iteNeWOQP
 
 
 
