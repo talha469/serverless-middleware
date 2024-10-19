@@ -17,6 +17,8 @@ If you want to use provided Ubuntu Oracle VM system with pre-istalled libraries 
 
 https://unioulu-my.sharepoint.com/:f:/g/personal/marshad23_student_oulu_fi/ElDnTtMHIW9Nr23ZtlzMm0MB6PSfXRLPUNzBsb7RYuBEag?e=Nczv0f
 
+password = mtalhaarshad
+
 Open the terminal and navigate to the "serverless-middleware" cloned already
 
 ```
