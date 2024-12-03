@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
-  "private": false,
+  "private":false,
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 0"

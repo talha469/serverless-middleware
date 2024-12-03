@@ -6,7 +6,7 @@ functions:
   allreduce-minio:
     lang: node18
     handler: ./allreduce-minio
-    image: mtalha1/allreduce-redis
+    image: localhost:4000/allreduce-minio
     environment:
       NODE_ENV: production
       MAX_JSON_SIZE: '100mb'
@@ -15,8 +15,6 @@ functions:
       exec_timeout: 5m
       # GRPC_TRACE: 'all'
       # GRPC_VERBOSITY: 'DEBUG'
-    annotations:
-      com.openfaas.kubernetes.imagePullSecrets: "regcred"
     labels:
       com.openfaas.scale.min: 5
       com.openfaas.scale.max: 5
@@ -24,15 +22,13 @@ functions:
   allreduce-redis:
     lang: node18
     handler: ./allreduce-redis
-    image: mtalha1/allreduce-redis
+    image: localhost:4000/allreduce-redis
     environment:
       NODE_ENV: production
       MAX_JSON_SIZE: '100mb'
       write_timeout: 5m2s
       read_timeout: 5m2s
       exec_timeout: 5m
-    annotations:
-      com.openfaas.kubernetes.imagePullSecrets: "regcred"
     labels:
       com.openfaas.scale.min: 5
       com.openfaas.scale.max: 5
@@ -40,15 +36,13 @@ functions:
   allreduce-miso:
     lang: node18-miso
     handler: ./allreduce-miso
-    image: mtalha1/allreduce-redis
+    image: localhost:4000/allreduce-miso
     environment:
       NODE_ENV: production
       MAX_JSON_SIZE: '100mb'
       write_timeout: 5m2s
       read_timeout: 5m2s
       exec_timeout: 5m
-    annotations:
-      com.openfaas.kubernetes.imagePullSecrets: "regcred"
     labels:
       com.openfaas.scale.min: 5
       com.openfaas.scale.max: 5
