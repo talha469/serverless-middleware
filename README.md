@@ -101,6 +101,11 @@ git --version
    cd serverless-middleware
    ```
 
+**running verdaccio on host network bridge**
+```
+docker run -d --name verdaccio --network bridge -p 4873:4873 verdaccio/verdaccio
+```
+
 ### Install required tools
 To save the time we have created a executable script to install all required packages and tools, run the script below. It can take some time
 
